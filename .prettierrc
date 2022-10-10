@@ -1,0 +1,19 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "printWidth": 120,
+  "quoteProps": "consistent",
+  "importOrder": [
+    "^layouts/(.*)$",
+    "^components/(.*)$",
+    "^interfaces/(.*)$",
+    "^enums/(.*)$",
+    "^hooks/(.*)$",
+    "^contexts/(.*)$",
+    "^config/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

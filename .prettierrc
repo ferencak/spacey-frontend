@@ -7,6 +7,7 @@
   "importOrder": [
     "^layouts/(.*)$",
     "^components/(.*)$",
+    "^modals/(.*)$",
     "^interfaces/(.*)$",
     "^enums/(.*)$",
     "^hooks/(.*)$",

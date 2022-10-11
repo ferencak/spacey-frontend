@@ -1,5 +1,3 @@
-import AddAstronautModal from 'modals/AddAstronautModal'
-import EditAstronautModal from 'modals/EditAstronautModal'
 import { FC, useEffect } from 'react'
 import { GoPlusSmall } from 'react-icons/go'
 
@@ -11,6 +9,9 @@ import Input from 'components/form/Input'
 import LoadingContainer from 'components/loading-container/LoadingContainer'
 import Table from 'components/table/Table'
 import TopBar from 'components/top-bar/TopBar'
+
+import AddAstronautModal from 'modals/AddAstronautModal'
+import EditAstronautModal from 'modals/EditAstronautModal'
 
 import { IAstronaut } from 'interfaces/IAstronaut'
 

@@ -11,7 +11,7 @@ const ModalWrapper: FC<IModalWrapperProps> = ({ children }): JSX.Element => (
     className="absolute flex z-50 w-full h-full items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm"
   >
     <div className="relative p-4 w-full max-w-2xl h-full md:h-auto">
-      <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">{children}</div>
+      <div className="relative bg-white rounded-lg shadow">{children}</div>
     </div>
   </div>
 )

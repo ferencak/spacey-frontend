@@ -128,10 +128,10 @@ const AddAstronautModal: FC = (): JSX.Element => {
                 ))}
               </Select>
             </div>
-            <div className="flex justify-end items-center pt-4 space-x-3 rounded-b border-t border-gray-200 dark:border-gray-600">
+            <div className="flex justify-end items-center pt-4 space-x-3 rounded-b border-t border-gray-200">
               <Button
                 text="Create"
-                className="text-white bg-blue-700 hover:bg-blue-800 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 !py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 !py-2.5 text-center"
                 isLoading={addAstronautLoading || refreshAstronautsLoading}
                 onClick={onSubmit}
               />

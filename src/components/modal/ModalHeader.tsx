@@ -11,12 +11,12 @@ const ModalHeader: FC<IModalHeaderProps> = ({ title, showCloseButton = true }): 
   const { hideModal } = useModal()
 
   return (
-    <div className="flex justify-between items-start p-4 rounded-t border-b dark:border-gray-600">
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
+    <div className="flex justify-between items-start p-4 rounded-t border-b">
+      <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       {showCloseButton && (
         <button
           type="button"
-          className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 duration-300 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+          className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 duration-300 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
           onClick={() => hideModal()}
         >
           <svg

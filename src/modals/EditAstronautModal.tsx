@@ -155,16 +155,16 @@ const EditAstronautModal: FC<IEditAstronautModalProps> = ({ astronaut }): JSX.El
                 ))}
               </Select>
             </div>
-            <div className="flex justify-between items-center pt-4 space-x-3 rounded-b border-t border-gray-200 dark:border-gray-600">
+            <div className="flex justify-between items-center pt-4 space-x-3 rounded-b border-t border-gray-200">
               <Button
                 text="Delete"
-                className="text-white bg-red-600 hover:bg-red-700 duration-300 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+                className="text-white bg-red-600 hover:bg-red-700 duration-300 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 isLoading={deleteAstronautLoading || refreshAstronautsLoading}
                 onClick={onDelete}
               />
               <Button
                 text="Save"
-                className="text-white bg-blue-700 hover:bg-blue-800 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 !py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white bg-blue-700 hover:bg-blue-800 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 !py-2.5 text-center"
                 isLoading={updateAstronautLoading || refreshAstronautsLoading}
                 onClick={onSubmit}
               />

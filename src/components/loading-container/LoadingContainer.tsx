@@ -10,7 +10,7 @@ const LoadingContainer: FC<ILoadingContainerProps> = ({ isLoading, children }): 
           <div role="status">
             <svg
               aria-hidden="true"
-              className="w-8 h-8 text-gray-50 animate-spin dark:text-indigo-50 fill-blue-500"
+              className="w-8 h-8 text-gray-50 animate-spin fill-blue-500"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

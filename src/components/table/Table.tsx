@@ -100,7 +100,7 @@ const Table: FC<ITableProps> = ({
               <span className="font-medium">{data.length}</span> results
             </p>
           </div>
-          <div className="flex flex-1 justify-between sm:hidden">
+          <div className="flex flex-1 ml-5 justify-between sm:hidden">
             <span
               className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
               onClick={() => handlePreviousPage()}

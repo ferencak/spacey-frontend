@@ -23,7 +23,7 @@ const AppLayout: FC = (): JSX.Element => {
   const { showModal } = useModal()
 
   const { response, loading } = useApi({
-    url: '/all-astronauts',
+    url: '/astronauts',
     method: 'GET',
     autoFetch: true,
   })

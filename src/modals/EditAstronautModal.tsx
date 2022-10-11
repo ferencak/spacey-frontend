@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 
+import Button from 'components/button/Button'
 import Input from 'components/form/Input'
 import Select from 'components/form/Select'
 import LoadingContainer from 'components/loading-container/LoadingContainer'
@@ -42,7 +43,7 @@ const EditAstronautModal: FC<IEditAstronautModalProps> = ({ astronaut }): JSX.El
     response: updateAstronautResponse,
     loading: updateAstronautLoading,
   } = useApi({
-    url: '/update-astronaut',
+    url: `/astronaut/update/${astronautData.id}`,
     method: 'PUT',
     data: astronautData,
   })
@@ -60,11 +61,8 @@ const EditAstronautModal: FC<IEditAstronautModalProps> = ({ astronaut }): JSX.El
     response: deleteAstronautResponse,
     loading: deleteAstronautLoading,
   } = useApi({
-    url: '/delete-astronaut',
+    url: `/astronaut/delete/${astronautData.id}`,
     method: 'DELETE',
-    data: {
-      id: astronautData.id,
-    },
   })
 
   useEffect(() => {
@@ -80,7 +78,7 @@ const EditAstronautModal: FC<IEditAstronautModalProps> = ({ astronaut }): JSX.El
     response: refreshAstronautsResponse,
     loading: refreshAstronautsLoading,
   } = useApi({
-    url: '/all-astronauts',
+    url: '/astronauts',
     method: 'GET',
   })
 
@@ -158,20 +156,18 @@ const EditAstronautModal: FC<IEditAstronautModalProps> = ({ astronaut }): JSX.El
               </Select>
             </div>
             <div className="flex justify-between items-center pt-4 space-x-3 rounded-b border-t border-gray-200 dark:border-gray-600">
-              <button
-                type="button"
+              <Button
+                text="Delete"
                 className="text-white bg-red-600 hover:bg-red-700 duration-300 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+                isLoading={deleteAstronautLoading || refreshAstronautsLoading}
                 onClick={onDelete}
-              >
-                Delete
-              </button>
-              <button
-                type="button"
-                className="text-white bg-blue-700 hover:bg-blue-800 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              />
+              <Button
+                text="Save"
+                className="text-white bg-blue-700 hover:bg-blue-800 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 !py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                isLoading={updateAstronautLoading || refreshAstronautsLoading}
                 onClick={onSubmit}
-              >
-                Save
-              </button>
+              />
             </div>
           </div>
         </ModalContent>

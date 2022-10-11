@@ -10,11 +10,9 @@ import './assets/styles/index.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-  <React.StrictMode>
-    <StoreProvider>
-      <ModalProvider>
-        <AppLayout />
-      </ModalProvider>
-    </StoreProvider>
-  </React.StrictMode>
+  <StoreProvider>
+    <ModalProvider>
+      <AppLayout />
+    </ModalProvider>
+  </StoreProvider>
 )

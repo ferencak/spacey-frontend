@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from 'react'
 
+import Button from 'components/button/Button'
 import Input from 'components/form/Input'
 import Select from 'components/form/Select'
 import LoadingContainer from 'components/loading-container/LoadingContainer'
@@ -36,7 +37,7 @@ const AddAstronautModal: FC = (): JSX.Element => {
     response: addAstronautResponse,
     loading: addAstronautLoading,
   } = useApi({
-    url: '/add-astronaut',
+    url: '/create-astronaut',
     method: 'POST',
     data: astronautData,
   })
@@ -54,7 +55,7 @@ const AddAstronautModal: FC = (): JSX.Element => {
     response: refreshAstronautsResponse,
     loading: refreshAstronautsLoading,
   } = useApi({
-    url: '/all-astronauts',
+    url: '/astronauts',
     method: 'GET',
   })
 
@@ -128,13 +129,12 @@ const AddAstronautModal: FC = (): JSX.Element => {
               </Select>
             </div>
             <div className="flex justify-end items-center pt-4 space-x-3 rounded-b border-t border-gray-200 dark:border-gray-600">
-              <button
-                type="button"
-                className="text-white bg-blue-700 hover:bg-blue-800 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              <Button
+                text="Create"
+                className="text-white bg-blue-700 hover:bg-blue-800 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 !py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                isLoading={addAstronautLoading || refreshAstronautsLoading}
                 onClick={onSubmit}
-              >
-                Create
-              </button>
+              />
             </div>
           </div>
         </ModalContent>
